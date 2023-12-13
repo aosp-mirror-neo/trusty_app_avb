@@ -11,7 +11,7 @@ INCLUDES := \
 	-I $(BASE)/lib/include \
 	-I $(AVBDIR) \
 	-I $(BASE)/lib/lib/libstdc++-trusty/include \
-	-I $(BASE)/external/lk/include/uapi \
+	-I $(BASE)/$(LKROOT)/include/uapi \
 	-I $(BASE)/lib/include/user \
 
 DEFINES := -DSTORAGE_FAKE
