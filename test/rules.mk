@@ -33,4 +33,8 @@ HOST_FLAGS := -Wpointer-arith -fno-permissive \
 HOST_LIBS := \
 	stdc++ \
 
+HOST_DEPS := \
+	trusty/user/base/host/unittest \
+
+
 include make/host_test.mk
