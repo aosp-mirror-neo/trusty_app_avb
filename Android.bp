@@ -3,3 +3,25 @@ dirgroup {
     dirs: ["."],
     visibility: ["//trusty/vendor/google/aosp/scripts"],
 }
+
+cc_test_host {
+    name: "trusty_user_app_avb_hosttest",
+    srcs: [
+        "avb_manager.cpp",
+        "avb_messages.cpp",
+        "test/unittest.cpp",
+    ],
+    cflags: [
+        "-DSTORAGE_FAKE",
+        "-Wno-unused-parameter",
+    ],
+    static_libs: [
+        "trusty_user_base_host_unittest",
+    ],
+    header_libs: [
+        "external_trusty_lk_headers_shared",
+        "external_trusty_lk_headers_uapi",
+        "trusty_user_base_headers_user",
+        "trusty_user_base_lib_libstdcxx_headers",
+    ],
+}
